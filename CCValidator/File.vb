@@ -15,9 +15,9 @@ Module File
                 Form1.TextBox1.Text = Form1.TextBox1.Text + bus + Environment.NewLine
             End If
         Next
-        Ecrire(Form1.FICHIER_BUS, Form1.TextBox1.Text)
+        Ecrire_BUS(Form1.FICHIER_BUS, Form1.TextBox1.Text)
     End Function
-    Public Function Ecrire(ByRef Fichier, ByRef Texte)
+    Public Function Ecrire_BUS(ByRef Fichier, ByRef Texte)
         System.Threading.Thread.Sleep(1000)
         If My.Computer.FileSystem.FileExists(Fichier.ToString) Then
             My.Computer.FileSystem.DeleteFile(Fichier.ToString)
