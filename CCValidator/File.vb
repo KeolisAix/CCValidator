@@ -32,7 +32,7 @@ Module File
     End Function
     Public Function AjouterValeur(ByRef BUS, ByRef VIDAGE)
         System.Threading.Thread.Sleep(1000)
-        Dim Aujourdhui As DateTime = Date.Now
+        Dim Aujourdhui As DateTime = Date.Now.AddDays(-1)
         Try
             For Each line As String In System.IO.File.ReadAllLines(VIDAGE.ToString)
                 Dim word = line.Split(";")

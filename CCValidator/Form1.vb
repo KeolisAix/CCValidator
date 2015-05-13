@@ -4,7 +4,7 @@
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     ' VARIABLES DE DEFINITION A ADAPTER
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    Dim Aujourdhui As DateTime = Date.Now
+    Dim Aujourdhui As DateTime = Date.Now.AddDays(-1)
     Dim Jour As String = Aujourdhui.ToString("dd")
     Dim Mois As String = Aujourdhui.ToString("MM")
     Dim Annee As String = Aujourdhui.ToString("yyyy")
