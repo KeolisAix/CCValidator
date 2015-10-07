@@ -25,11 +25,19 @@
             FICHIER_EVENEMENT_D1D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + Mois + "_" + JourGlobal + "_Evenement_D1D2.txt"
         End If
         If Jour.ToString <= 10 And Mois.Contains("0") = True Then
+            'MsgBox(FICHIER_EVENEMENT_D1)
             JourGlobal = Jour.Substring(1, 1)
             MoisGlobal = Mois.Substring(1, 1)
-            FICHIER_EVENEMENT_D1 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement.txt"
-            FICHIER_EVENEMENT_D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement_D2.txt"
-            FICHIER_EVENEMENT_D1D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement_D1D2.txt"
+            If Mois.ToString = 10 Then
+                FICHIER_EVENEMENT_D1 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + Mois + "_" + JourGlobal + "_Evenement.txt"
+                FICHIER_EVENEMENT_D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + Mois + "_" + JourGlobal + "_Evenement_D2.txt"
+                FICHIER_EVENEMENT_D1D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + Mois + "_" + JourGlobal + "_Evenement_D1D2.txt"
+            Else
+                FICHIER_EVENEMENT_D1 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement.txt"
+                FICHIER_EVENEMENT_D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement_D2.txt"
+                FICHIER_EVENEMENT_D1D2 = "C:\COMPTAGE\EVENEMENTS\" + Annee + "_" + MoisGlobal + "_" + JourGlobal + "_Evenement_D1D2.txt"
+            End If
+            'MsgBox(FICHIER_EVENEMENT_D1)
         End If
         If Jour.ToString >= 10 And Mois.Contains("0") = True Then
             JourGlobal = Jour.Substring(1, 1)
